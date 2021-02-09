@@ -17,11 +17,6 @@ body {
     background: var(--theme-dark-grey);
 }
 
-.nav-link {
-    text-decoration: none;
-    font-size: 1rem;
-}
-
 .invisible-link {
     text-decoration: none;
 }
@@ -58,16 +53,19 @@ header.headbar, .nav-bar, .nav-list  {
 
 .nav-element {
     margin: 0 3vw;
-}
-
-.nav-element a {
+    text-decoration: none;
+    font-size: 1rem;
     color: var(--theme-dark-grey);
     font-weight: 500;
     font-size: 1.1rem;
     position: relative;
 }
 
-.nav-element a::after {
+.nav-element:hover {
+    cursor: pointer;
+}
+
+.nav-element::after {
     content: "";
     position: absolute;
     width: 0;
@@ -78,7 +76,7 @@ header.headbar, .nav-bar, .nav-list  {
     transition: all 200ms ease-in-out;
 }
 
-.nav-element a:hover::after {
+.nav-element:hover::after {
     visibility: visible;
     width: 100%;
 }
@@ -298,7 +296,7 @@ div.card {
         border-radius: 20px;
     }
 
-    .nav-element a {
+    .nav-element {
         color: #fff;
     }
 }
