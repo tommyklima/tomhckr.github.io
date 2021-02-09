@@ -303,7 +303,7 @@ div.card {
     }
 }
 
-/* @media only screen and (max-width: 830px) {
+@media only screen and (max-width: 830px) {
     .device-limiter {
         height: 100vh;
         width: 100vw;
@@ -344,9 +344,9 @@ div.card {
         background-color: var(--theme-dark-grey);
         color: white;
     }
-} */
+}
 
-@media only screen and (max-width: 830px) {
+@media only screen and (min-width: 830px) {
     .device-limiter {
         display: none;
     }
