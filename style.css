@@ -1,0 +1,353 @@
+* {
+    font-family: Work Sans,
+    sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+:root {
+    --theme-orange: #ff8800;
+    --theme-dark-grey: #0b0b0b;
+    --theme-light-grey: #3a3a3a;
+}
+
+body {
+    background: var(--theme-dark-grey);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.invisible-link {
+    text-decoration: none;
+}
+
+header.headbar {
+    flex-flow: row, nowrap;
+    height: 95px;
+    top: 0;
+    width: 100vw;
+}
+
+header.headbar, .nav-bar, .nav-list  {
+    display: flex;
+    align-items: center;
+}
+
+.nav-title {
+    margin-left: 55px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: var(--theme-orange);
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-bar {
+    position: absolute;
+    right: clamp(150px, 17vw, 200px);
+}
+
+.nav-element {
+    margin: 0 3vw;
+}
+
+.nav-element a {
+    color: var(--theme-dark-grey);
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-element a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--theme-dark-grey);
+    transition: all 200ms ease-in-out;
+}
+
+.nav-element a:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+header.headbar button {
+    position: absolute;
+    right: 55px;
+    align-self: center;
+    background: var(--theme-dark-grey);
+    border-radius: 20px;
+    border: solid 5px var(--theme-dark-grey);
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 200ms linear;
+}
+
+header.headbar button:hover {
+    background-color:var(--theme-orange);
+    color: var(--theme-dark-grey);
+}
+
+main {
+    margin: 0 8vw;
+}
+
+section#intro {
+    height: 75vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.intro-background {
+    top: 0;
+    left: 0;
+    z-index: -2;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 25% 50%, var(--theme-light-grey), var(--theme-dark-grey) 37%);
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+
+.intro-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.intro-highlight {
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--theme-orange);
+}
+
+.orange-graphics {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63vw;
+    z-index: -1;
+}
+
+div.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin-bottom: 10vh;
+}
+
+.nav-arrow {
+    position: relative;
+    transform: rotate(270deg);
+    width: 40px;
+    margin: -20px;
+    animation: arrow-bounce ease-in-out 3s infinite;
+    fill: red;
+}
+
+.nav-arrow:nth-child(2) {
+    animation-delay: 0.30s;
+}
+
+@keyframes arrow-bounce {
+    0%, 100% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: -10px;
+    }
+}
+
+section.content-section {
+    margin-bottom: 150px;
+}
+
+.section-description {
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+h2.section-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+p.subheading-text {
+    font-family: Work Sans;
+    margin: 0 10vw;
+}
+
+/* projects */
+
+.project-cards {
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: none;
+}
+
+.project-cards::-webkit-scrollbar {
+    height: 5px;
+}
+
+.project-cards::-webkit-scrollbar-thumb {
+    background-color: var(--theme-orange);
+    border-radius: 20px;
+}
+
+div.card {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+    padding: 10px;
+    height: auto;
+    margin: 0 10px;
+    background: var(--theme-light-grey);
+    border-radius: 30px;
+    box-shadow: -1rem 0 40px 2px #000;
+    transition: transform 200ms 10ms ease-in-out;
+}
+
+.card:not(:first-child) {
+    margin-left: -150px;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+    transform: translateX(150px);
+}
+
+.project-img {
+    border-radius: 30px;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-name {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 2rem;
+    transition: color 100ms 5ms linear;
+}
+
+.project-name:hover {
+    color: var(--theme-orange);
+}
+
+@media only screen and (max-width: 1080px) {
+    .intro-title {
+        font-size: 3rem;
+    }
+
+    .intro-highlight {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .intro-title {
+        font-size: 2.5rem;
+    }
+
+    .intro-highlight {
+        font-size: 3rem;
+    }
+
+    .nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        top: 60px;  
+        justify-content: space-evenly;
+        background-color: var(--theme-dark-grey);
+        border-radius: 20px;
+    }
+
+    .nav-element a {
+        color: #fff;
+    }
+}
+
+/* @media only screen and (max-width: 830px) {
+    .device-limiter {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        background-color: var(--theme-dark-grey);
+        z-index: 10;
+        text-align: center;
+    }
+    .intro-highlight {
+        color: var(--theme-orange);
+        font-weight: black;
+        font-family: Montserrat, sans-serif;
+        margin-top: 20vh;
+    }
+    .intro-title {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .sorry h3 {
+        font-family: Work Sans, sans-serif;
+        margin: 20px 20vw;
+    }
+    .signature-btn {
+        position: relative;
+        align-self: center;
+        background: var(--theme-orange);
+        border-radius: 20px;
+        border: solid 5px var(--theme-orange);
+        padding: 10px;
+        margin: 40px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: black;
+        transition: all 200ms linear;
+    }
+
+    .signature-btn:hover {
+        background-color: var(--theme-dark-grey);
+        color: white;
+    }
+} */
+
+@media only screen and (max-width: 830px) {
+    .device-limiter {
+        display: none;
+    }
+}
