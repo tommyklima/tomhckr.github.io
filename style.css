@@ -114,7 +114,7 @@ section#intro {
     align-items: center;
 }
 
-.intro-background {
+.intro-background-gradient {
     top: 0;
     left: 0;
     z-index: -2;
@@ -139,12 +139,35 @@ section#intro {
     color: var(--theme-orange);
 }
 
-.orange-graphics {
+.intro-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60vw;
+    height: auto;
+}
+
+.intro-bg-img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 63vw;
+    width: 60vw;
     z-index: -1;
+}
+
+.dot {
+    position: relative;
+}
+
+.dot:nth-child(2) {
+    width: 7%;
+    left: 0px;
+}
+
+.dot:nth-child(3) {
+    width: 10%;
+    left: 315px;
+    top: 30px;
 }
 
 div.divider {
