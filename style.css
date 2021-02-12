@@ -1,3 +1,5 @@
+/*  setting up the document */
+
 * {
     font-family: Work Sans,
     sans-serif;
@@ -17,9 +19,15 @@ body {
     background: var(--theme-dark-grey);
 }
 
+
+/* applying global styles */
+
 .invisible-link {
     text-decoration: none;
 }
+
+
+/* header -> navbar styling */
 
 header.headbar {
     flex-flow: row, nowrap;
@@ -102,9 +110,15 @@ header.headbar button:hover {
     color: var(--theme-dark-grey);
 }
 
+
+/* main content styling */
+
 main {
     margin: 0 8vw;
 }
+
+
+/* intro-page styling */
 
 section#intro {
     height: 75vh;
@@ -155,6 +169,9 @@ section#intro {
     z-index: -1;
 }
 
+
+/* intro divider styling */
+
 div.divider {
     display: flex;
     align-items: center;
@@ -185,6 +202,9 @@ div.divider {
     }
 }
 
+
+/* global section styling */
+
 section.content-section {
     margin-bottom: 150px;
 }
@@ -208,7 +228,8 @@ p.section-text {
     margin: 0 10vw;
 }
 
-/* projects */
+
+/* projects section styling */
 
 .project-cards {
     display: flex;
@@ -275,6 +296,9 @@ div.card {
     color: var(--theme-orange);
 }
 
+
+/* responsive layout styling */
+
 @media only screen and (max-width: 1080px) {
     .intro-title {
         font-size: 3rem;
@@ -303,6 +327,20 @@ div.card {
         justify-content: space-evenly;
         background-color: var(--theme-dark-grey);
         border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        right: 0;
+    }
+
+    .action-bar {
+        position: absolute;
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 1;
+        width: 20vw;
+        height: 80vh;
+        top: 0;
+        right: 0;
     }
 
     .nav-element {
@@ -329,6 +367,10 @@ div.card {
         font-size: 2rem;
         margin-top: 10px;
     }
+
+
+    /* device limiter */
+
     .sorry h3 {
         font-family: Work Sans, sans-serif;
         margin: 20px 20vw;
@@ -357,4 +399,8 @@ div.card {
     .device-limiter {
         display: none;
     }
+}
+
+.device-limiter {
+    display: none;
 }
