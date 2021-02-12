@@ -155,21 +155,6 @@ section#intro {
     z-index: -1;
 }
 
-.dot {
-    position: relative;
-}
-
-.dot:nth-child(2) {
-    width: 7%;
-    left: 0px;
-}
-
-.dot:nth-child(3) {
-    width: 10%;
-    left: 315px;
-    top: 30px;
-}
-
 div.divider {
     display: flex;
     align-items: center;
@@ -218,7 +203,7 @@ h2.section-title {
     margin-bottom: 20px;
 }
 
-p.subheading-text {
+p.section-text {
     font-family: Work Sans;
     margin: 0 10vw;
 }
@@ -250,6 +235,7 @@ div.card {
     position: relative;
     padding: 10px;
     height: auto;
+    min-width: 30%;
     margin: 0 10px;
     background: var(--theme-light-grey);
     border-radius: 30px;
