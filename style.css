@@ -306,7 +306,10 @@ p.section-text {
     margin: 0 10vw;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 460px) {
+    .intro-background {
+        display: none;
+    }
 
     .head-bar {
         display: flex;
