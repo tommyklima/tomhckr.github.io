@@ -29,18 +29,6 @@ body {
 
 /* header -> navbar styling */
 
-header.headbar {
-    flex-flow: row, nowrap;
-    height: 95px;
-    top: 0;
-    width: 100vw;
-}
-
-header.headbar, .nav-bar, .nav-list  {
-    display: flex;
-    align-items: center;
-}
-
 .nav-title {
     margin-left: 55px;
     font-size: 1.4rem;
@@ -54,16 +42,9 @@ header.headbar, .nav-bar, .nav-list  {
     list-style: none;
 }
 
-.nav-bar {
-    position: absolute;
-    right: clamp(150px, 17vw, 200px);
-}
-
 .nav-element {
-    margin: 0 3vw;
     text-decoration: none;
     font-size: 1rem;
-    color: var(--theme-dark-grey);
     font-weight: 500;
     font-size: 1.1rem;
     position: relative;
@@ -82,6 +63,7 @@ header.headbar, .nav-bar, .nav-list  {
     left: 0;
     background-color: var(--theme-dark-grey);
     transition: all 200ms ease-in-out;
+    margin-top: 10px;
 }
 
 .nav-element:hover::after {
@@ -89,25 +71,115 @@ header.headbar, .nav-bar, .nav-list  {
     width: 100%;
 }
 
-header.headbar button {
-    position: absolute;
-    right: 55px;
-    align-self: center;
+.head-bar button {
     background: var(--theme-dark-grey);
     border-radius: 20px;
-    border: solid 5px var(--theme-dark-grey);
-    padding: 10px;
-    width: 100px;
-    height: 50px;
+    padding: 13px;
+    width: 150px;
+    height: auto;
     cursor: pointer;
     font-size: 1.1rem;
-    color: white;
     transition: all 200ms linear;
 }
 
-header.headbar button:hover {
-    background-color:var(--theme-orange);
-    color: var(--theme-dark-grey);
+@media only screen and (min-width: 830px) {
+
+    .head-bar {
+        height: 95px;
+        top: 0;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-bar {
+        position: absolute;
+        display: flex;
+        flex-flow: row;
+        right: 0;
+        margin-right: 2%;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-element {
+        margin: 0 3vw;
+        color: var(--theme-dark-grey);
+        display: inline;
+    }
+
+
+    .head-bar button{
+        border: solid 5px var(--theme-dark-grey);
+        color: white;
+    }
+
+    .head-bar button:hover {
+        background-color: var(--theme-orange);
+        color: var(--theme-dark-grey);
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    
+    .head-bar {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+
+    .nav-bar {
+        margin: 20px 30px 0 0;
+        padding: 0;
+        position: absolute;
+        display: grid;
+        width: auto;
+        height: auto;
+        top: 0;
+        right: 0;
+        grid-gap: 20px;
+    }
+
+    .nav-element {
+        display: inline-block;
+        color: #fff;
+        margin: 20px 0;
+        padding: 0;
+        align-self: center;
+        text-align: center;
+    }
+
+    .nav-list {
+        position: relative;
+        border: solid 5px var(--theme-orange);
+        padding: 40px 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        background-color: var(--theme-dark-grey);
+        border-radius: 20px;
+        right: 0;
+    }
+
+    .head-bar button {
+        right: 0;
+        position: relative;
+        border: solid 5px var(--theme-orange);
+    }
+
+    .head-bar button:hover {
+        background-color: var(--theme-orange);
+        color: #000;
+    }
+
+    .nav-element::after {
+        background-color: #fff;
+    }
 }
 
 
@@ -169,6 +241,12 @@ section#intro {
     z-index: -1;
 }
 
+@media only screen and (max-width: 950px) {
+    .intro-bg-img {
+        width: 65vw;
+    }
+}
+
 
 /* intro divider styling */
 
@@ -211,7 +289,7 @@ section.content-section {
 
 .section-description {
     text-align: center;
-    height: 200px;
+    height: auto;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -228,6 +306,68 @@ p.section-text {
     margin: 0 10vw;
 }
 
+@media only screen and (max-width: 400px) {
+
+    .head-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-bar {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .nav-title {
+        margin: 0;
+    }
+
+    button.modeBtn {
+        margin-top: 30px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        top: 30px;
+    }
+
+    .nav-element {
+        position: relative;
+        margin: 0 5vw;
+        padding: 0;
+    }
+
+    .nav-list {
+        padding: 10px;
+    }
+
+    p.section-title {
+        margin: 0;
+    }
+
+    main {
+        margin: 1vw;
+    }
+
+    .title {
+        margin-left: 4vw;
+    }
+
+    section#intro {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-background-gradient {
+        background: radial-gradient(circle at 50% 50%, var(--theme-light-grey), var(--theme-dark-grey) 45%);
+    }
+}
+
 
 /* projects section styling */
 
@@ -239,6 +379,7 @@ p.section-text {
     padding: 1rem;
     padding-bottom: 2rem;
     background-color: none;
+    max-height: 50vh;
 }
 
 .project-cards::-webkit-scrollbar {
@@ -256,12 +397,13 @@ div.card {
     position: relative;
     padding: 10px;
     height: auto;
-    min-width: 30%;
+    width: auto;
     margin: 0 10px;
     background: var(--theme-light-grey);
     border-radius: 30px;
     box-shadow: -1rem 0 40px 2px #000;
     transition: transform 200ms 10ms ease-in-out;
+    min-width: 30vw;
 }
 
 .card:not(:first-child) {
@@ -278,6 +420,8 @@ div.card {
 
 .project-img {
     border-radius: 30px;
+    width: 100%;
+    height: 100%;
 }
 
 .project-info {
@@ -294,6 +438,18 @@ div.card {
 
 .project-name:hover {
     color: var(--theme-orange);
+}
+
+@media only screen and (max-width: 1000px) {
+    div.card {
+        min-width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    div.card {
+        min-width: 50vw;
+    }
 }
 
 
@@ -318,37 +474,7 @@ div.card {
         font-size: 3rem;
     }
 
-    .nav-list {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
-        top: 60px;  
-        justify-content: space-evenly;
-        background-color: var(--theme-dark-grey);
-        border-radius: 20px;
-        margin: 0;
-        padding: 0;
-        right: 0;
-    }
 
-    .action-bar {
-        position: absolute;
-        display: grid;
-        grid-template-rows: 2;
-        grid-template-columns: 1;
-        width: 20vw;
-        height: 80vh;
-        top: 0;
-        right: 0;
-    }
-
-    .nav-element {
-        color: #fff;
-    }
-}
-
-@media only screen and (max-width: 830px) {
     .device-limiter {
         height: 100vh;
         width: 100vw;
@@ -357,13 +483,15 @@ div.card {
         z-index: 10;
         text-align: center;
     }
-    .intro-highlight {
+
+    .apology-message .intro-highlight {
         color: var(--theme-orange);
         font-weight: black;
         font-family: Montserrat, sans-serif;
         margin-top: 20vh;
     }
-    .intro-title {
+
+    .apology-message .intro-title {
         font-size: 2rem;
         margin-top: 10px;
     }
@@ -371,10 +499,11 @@ div.card {
 
     /* device limiter */
 
-    .sorry h3 {
+    .apology-message h3 {
         font-family: Work Sans, sans-serif;
         margin: 20px 20vw;
     }
+
     .signature-btn {
         position: relative;
         align-self: center;

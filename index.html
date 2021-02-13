@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- default head tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicons, title -->
         <title>TomHckr's Portfolio</title>
+
+        <!-- stylesheets, fonts, icon packs -->
         <script src="https://kit.fontawesome.com/faa1eedbf0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
         </style>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v9.0" nonce="b7xipXtC"></script>
     </head>
     <body class="background-body">
+
+        <!-- device limiter full-screen banner -->
         <div class="device-limiter">
-            <div class="sorry">
+            <div class="apology-message">
                 <h1 class="intro-highlight">Coming Soon</h1>
                 <h2 class="intro-title">We are working on improving your mobile experience.</h2>
                 <h3>Please open this website on your computer or tablet in full screeen.</h3>
@@ -24,22 +29,23 @@
                 </button>
             </div>
         </div>
-        <header class="headbar">
+
+        <!-- head-bar, nav-bar -->
+        <header class="head-bar">
             <a href="index.html" class="invisible-link"><h5 class="nav-title">TomHckr</h5></a>
-            <div class="action-bar">
-                <nav class="nav-bar">
-                    <ul class="nav-list">
-                        <li class="nav-element">Home</li>
-                        <li class="nav-element">Social</li>
-                        <li class="nav-element">My Projects</li>
-                    </ul>
-                </nav>
-                <button class="modeBtn">
-                    Explore!
-                </button>
-            </div>
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li class="nav-element">Home</li>
+                    <li class="nav-element">Social</li>
+                    <li class="nav-element">My Projects</li>
+                </ul>
+                <button class="modeBtn">Placeholder</button>
+            </nav>
         </header>
+
         <main>
+
+            <!-- intro for the landing page -->
             <span class="intro-background-gradient"></span>
             <section id="intro">
                 <div class="title">
@@ -51,10 +57,14 @@
                     <img class="intro-bg-img" src="./intro-background/orange-graphics.svg" alt="">
                 </div>
             </section>
+
+            <!-- divider -->
             <div class="divider">
                 <img class="nav-arrow" src="other-media/arrow-left.svg" alt="Graphic representing a web designer">
                 <img class="nav-arrow" src="other-media/arrow-left.svg" alt="Graphic representing a web designer">
             </div>
+
+            <!-- section – projects-->
             <section class="content-section" id="projects">
                 <div class="section-description">
                     <h2 class="section-title">My Projects</h2>
@@ -126,6 +136,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- section – social's page-->
             <section class="content-section" id="social">
                 <div class="section-description">
                     <h2 class="section-title">Social</h2>
@@ -133,6 +145,8 @@
                 </div>
             </section>
         </main>
+
+        <!-- my scripts -->
         <script src="app.js"></script>
     </body>
 </html>
