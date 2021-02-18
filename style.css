@@ -374,15 +374,14 @@ p.section-text {
 
 /* projects section styling */
 
-.project-cards {
+div.project-cards {
     display: flex;
     flex-flow: row;
     overflow-x: scroll;
-    height: auto;
     padding: 1rem;
     padding-bottom: 2rem;
-    background-color: none;
-    max-height: 50vh;
+    height: auto;
+    box-shadow: none;
 }
 
 .project-cards::-webkit-scrollbar {
@@ -424,7 +423,7 @@ div.card {
 .project-img {
     border-radius: 30px;
     width: 100%;
-    height: 100%;
+    align-self: center;
 }
 
 .project-info {
