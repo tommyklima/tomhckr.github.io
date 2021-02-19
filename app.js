@@ -14,11 +14,12 @@ projectsNav.addEventListener('click', function () {
     });
 });
 
-// darkmode / light mode toggle
-const modeBtn = document.querySelector(".modeBtn");
-
-const changeMode = () => {
-    document.querySelector('.background-body').style.backgroundColor = "#ffffff";
-}
-
-modeBtn.addEventListener('click', changeMode);
+// explore btn
+const exploreBtn = document.querySelector(".exploreBtn");
+const navElementsList = document.querySelectorAll(".content-section");
+console.log(navElementsList);
+exploreBtn.addEventListener("click", () => {
+    navElementsList[Math.floor(Math.random()*navElementsList.length)].scrollIntoView({
+        behavior: 'smooth'
+    })
+})
