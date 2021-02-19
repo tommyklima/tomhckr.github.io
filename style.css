@@ -402,7 +402,7 @@ div.project-cards {
 div.card {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    position: relative;h
+    position: relative;
     padding: 10px;
     height: auto;
     width: auto;
