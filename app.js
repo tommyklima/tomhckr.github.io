@@ -1,6 +1,6 @@
 // navbar scrollers
-const socialsNav = document.querySelectorAll('.nav-element')[1];
-const projectsNav = document.querySelectorAll('.nav-element')[2];
+const socialsNav = document.querySelectorAll('.nav-element')[2];
+const projectsNav = document.querySelectorAll('.nav-element')[1];
 
 socialsNav.addEventListener('click', function () {
     document.querySelector('#social').scrollIntoView({
