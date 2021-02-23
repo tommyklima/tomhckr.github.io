@@ -23,3 +23,16 @@ exploreBtn.addEventListener("click", () => {
         behavior: 'smooth'
     })
 })
+
+// social links
+const socialLinks = document.querySelectorAll(".socials-item");
+function openLink (element, link) {
+    element.addEventListener('click', () => {
+        window.open(link, '_blank');
+    })
+}
+
+openLink(socialLinks[0], 'https://twitter.com/tomas_kli');
+openLink(socialLinks[1], 'https://stackoverflow.com/users/14676759/tom-hckr');
+openLink(socialLinks[2], 'https://github.com/TomHckr');
+openLink(socialLinks[3], 'https://www.instagram.com/kli_tomas/');
