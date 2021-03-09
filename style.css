@@ -396,12 +396,9 @@ div.project-cards {
 }
 
 div.card {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    height: auto;
-    width: auto;
     margin: 0 10px;
     background: var(--theme-light-grey);
     border-radius: 30px;
@@ -429,7 +426,8 @@ div.card {
     align-self: center;
     justify-self: center;
     max-height: 40vh;
-    max-width: inherit;
+    max-width: 100%;
+
 }
 
 .project-info {
