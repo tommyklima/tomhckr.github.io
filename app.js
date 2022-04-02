@@ -32,7 +32,7 @@ function openLink (element, link) {
     })
 }
 
-openLink(socialLinks[0], 'https://twitter.com/tomas_kli');
+openLink(socialLinks[0], 'https://twitter.com/tomklimq');
 openLink(socialLinks[1], 'https://stackoverflow.com/users/14676759/tom-hckr');
-openLink(socialLinks[2], 'https://github.com/TomHckr');
-openLink(socialLinks[3], 'https://www.instagram.com/kli_tomas/');
+openLink(socialLinks[2], 'https://github.com/tomklimq');
+openLink(socialLinks[3], 'https://www.instagram.com/tomklimq/');
